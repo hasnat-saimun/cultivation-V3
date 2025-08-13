@@ -108,61 +108,26 @@
                 </a>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
-
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link active">
+                            <a href="{{ route('homePage') }}" class="nav-link {{ request()->routeIs('homePage') ? 'active' : '' }}">
                                 Home
                             </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link active">
-                                        Home Demo - One
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-2.html" class="nav-link">
-                                        Home Demo - Two
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-3.html" class="nav-link">
-                                        Home Demo - Three
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                Pages
+                            <a href="javascript:void(0)" class="dropdown-toggle nav-link {{ request()->routeIs('institutePage') || request()->routeIs('principalSpeechPage') ? 'active' : '' }}">
+                                Institute
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="university-overview.html" class="nav-link">
-                                        University Overview
+                                    <a href="{{route('institutePage')}}" class="nav-link">
+                                        About Us
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0)" class="dropdown-toggle nav-link">
-                                        Blog
+                                    <a href="{{route('principalSpeechPage')}}" class=" nav-link">
+                                        Principal Speech
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="blog-style-one.html" class="nav-link">
-                                                Blog Style One
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-style-two.html" class="nav-link">
-                                                Blog Style Two
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-details.html" class="nav-link">
-                                                Blog Details
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>                
                                 <li class="nav-item">
                                     <a href="register.html" class="nav-link">
@@ -651,7 +616,7 @@
                     </div>
                     <div class="col-lg-5 col-sm-6">
                         <div class="copyright-title text-end">
-                            <p>© <strong>Adma</strong> is Proudly Owned by HiboTheme</p>
+                            <p>© <strong>Virtual IT Professional</strong> is Proudly Owned</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-sm-6">

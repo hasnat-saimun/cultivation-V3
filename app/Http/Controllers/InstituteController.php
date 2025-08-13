@@ -406,8 +406,8 @@ class InstituteController extends Controller
 
     //institute info
     public function institutePage(){
-        $syllabus  =   InstituteDetails::all();
-        return view('frontend.institute.instituteInfo',['Datakey'=>$syllabus]);
+        $syllabus  =   InstituteDetails::first();
+        return view('cultivationWeb.institute.aboutUs',['data'=>$syllabus]);
     }
     //principalSpeech
     public function principalSpeechPage(){
@@ -416,7 +416,7 @@ class InstituteController extends Controller
         $principalData  = TeacherManagement::where(['designation'=>1])->orWhere(['designation'=>2])->first();
         $cultivation    = ServerConfig::orderBy('id','DESC')->first();
         // $cultivation->count();
-        return view('frontend.institute.principalSpeech',['pSpeech'=>$pSpeech,'cultivation'=>$cultivation,'principal'=>$principalData]);
+        return view('cultivationWeb.institute.principalSpeech',['pSpeech'=>$pSpeech,'cultivation'=>$cultivation,'principal'=>$principalData]);
     }
     //X-principal
     public function exprincipalPage(){

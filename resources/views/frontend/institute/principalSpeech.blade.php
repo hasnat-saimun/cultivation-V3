@@ -59,7 +59,7 @@ body {
             <div class="col-8 col-md-3 text-center mx-auto">
                 @if(!empty($principal))
                 <div class="card">
-                    <img  class="w-100 wow bounce animated" data-wow-delay="1s" src="{{ asset('public/upload/image/teacher').'/'.$principal->avatar }}"/>
+                    <img  class="w-50  wow bounce animated" data-wow-delay="1s" src="{{ asset('public/upload/image/teacher').'/'.$principal->avatar }}"/>
                     <div class="card-footer">
                         <p>{{ $principal->firstName ." ". $principal->lastName  }}</p>
                         <p>@if($principal->designation==1) Principal @elseif($principal->designation==2) Principal(Incharge) @endif<br> {{ $insName }} </p>
